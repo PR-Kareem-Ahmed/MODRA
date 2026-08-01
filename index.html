@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kareem Ahmed | Portfolio Frame</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0c0f; /* خلفية داكنة تقنية */
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* الإطار الثابت حول كامل الشاشة */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            border: 2px solid rgba(0, 255, 255, 0.45); /* نيون سماوي */
+            box-shadow: 
+                0 0 30px rgba(0, 255, 255, 0.25),
+                inset 0 0 30px rgba(0, 255, 255, 0.08); /* توهج داخلي وخارجي فقط */
+            pointer-events: none; /* لا يؤثر على التفاعل */
+            z-index: 9999;
+            border-radius: 0; /* زوايا حادة لملء الشاشة بالكامل */
+        }
+
+        /* iframe يملأ الشاشة */
+        .site-frame {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            background: #000;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <iframe 
+        src="https://modra-social-hub.lovable.app" 
+        class="site-frame" 
+        title="Kareem Ahmed Portfolio"
+        sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals"
+        loading="lazy">
+    </iframe>
+</body>
+</html>
